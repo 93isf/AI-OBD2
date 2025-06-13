@@ -9,16 +9,17 @@ on:
 
 jobs:
   build:
+    name: Build APK
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Unzip project
-        run: unzip AI_OBD2_App_Full.zip -d project
+      - name: Extract ZIP
+        run: unzip *.zip -d project
 
-      - name: Set up Flutter
+      - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.13.0'
