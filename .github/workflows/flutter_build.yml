@@ -1,14 +1,14 @@
 
-name: Build Flutter APK
 on:
 push:
 paths:
-- '*.zip'
+- '**.zip'
 
 jobs:
 build:
-name: Build APK
+name: Build Flutter APK
 runs-on: ubuntu-latest
+
 steps:
 - name: Checkout code
 uses: actions/checkout@v3
