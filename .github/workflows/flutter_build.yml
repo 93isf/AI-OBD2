@@ -4,11 +4,10 @@ name: Build Flutter APK
 on:
 push:
 paths:
-- '**.zip'
+- '*.zip'
 
 jobs:
 build:
-name: Build APK
 runs-on: ubuntu-latest
 
 steps:
@@ -18,7 +17,7 @@ uses: actions/checkout@v3
 - name: Extract ZIP
 run: unzip *.zip -d project
 
-- name: Setup Flutter
+- name: Set up Flutter
 uses: subosito/flutter-action@v2
 with:
 flutter-version: '3.13.0'
